@@ -1,0 +1,601 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
+:root{
+    --a-color:#fff;
+}
+/* --------Shared---------- */
+body{
+    background-color: #f5f5f5;
+    color: #4e4e4e;
+}
+.section-padding{
+    padding: 100px 0;
+}
+.p-3rem{
+    padding: 3rem !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #1e1e1e;
+}
+ul{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+li{
+    list-style: none;
+}
+.title-a{
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.paragraph-a{
+    text-decoration: none;
+    color: #4e4e4e;
+}
+.line-mf {
+    width: 40px;
+    height: 5px;
+    background-color: #0078ff;
+    margin: 0 auto;
+}
+a{
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+}
+.box-shadow, .card-blog, .work-box, .services-box, .paralax-mf {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+.box-shadow-full {
+    padding: 3rem 1.25rem;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 3rem;
+    z-index: 2;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+/* --------End Shared--------- */
+/* ------------Navbar---------- */
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show ,
+.nav-link ,.navbar-brand ,.navbar-brand:hover{
+    color: var(--a-color);
+}
+.navbar .container .navbar-nav .nav-item .nav-link{
+    position: relative;
+    
+}
+.navbar{
+    letter-spacing: 1px;
+    background-color: #000000d5;
+}
+.navbar .container .navbar-nav .nav-item .nav-link.active::after{
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 10px;
+    width: 60%;
+    height: 2px;
+    background-color: var(--a-color);
+    color: var(--a-color);
+}
+.navbar .container .navbar-nav .nav-item .nav-link::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    top: 90%;
+    left: 10px;
+    height: 2px;
+    background-color: var(--a-color);
+    color: var(--a-color);
+    transition: width 0.3s;
+}
+.navbar .container .navbar-nav .nav-item .nav-link:hover::after {
+    width: 60%;
+}
+.nav-link:focus, .nav-link:hover{
+    color: var(--a-color);
+}
+.dropdown-toggle::after{
+    display: none;
+}
+.dropdown:hover .d-m-1{
+    display: block;
+}
+.d-m-2{
+    left: 90%;
+}
+.dropdown-2:hover .d-m-2{
+    display: block;
+}
+/* brackpoints */
+@media screen and (max-width: 768px) {
+    .navbar .container .navbar-nav .nav-item .nav-link.active::after{
+        width:0;
+    }
+    .navbar .container .navbar-nav .nav-item .nav-link:hover::after{
+        width:0;
+    }
+    #navbarSupportedContent{
+        height: 80vh ;
+        background-color:#fff ;
+    }
+    .nav-link{
+        color:#000 !important;
+    }
+}
+/* Edned brackpoint */
+/* ------------Navbar Ended---------- */
+
+/* -----------hero section------------ */
+
+
+
+
+.hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url(../img/hero-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.hero-content h1{
+    font-size: 4.5rem;
+}
+.hero-content p{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.hero-content p::after{
+    content: " |";
+    animation: typing 10s infinite  ;
+}
+/* ------------------------------------------------animation started------------------------------------------------ */
+
+/* Designer Developer Freelancer Photographer */
+@keyframes typing{
+    1%{content: " D|";}
+    2%{content: " De|";}
+    3%{content: " Des|";}
+    4%{content: " Desi|";}
+    5%{content: " Desig|";}
+    6%{content: " Design|";}
+    7%{content: " Designe|";}
+    8%{content: " Designer|";}
+    9%{content: " Designer |";}
+    10%{content: " Designer |";}
+    11%{content: " Designer |";}
+    12%{content: " Designer |";}
+    13%{content: " Designer|";}
+    14%{content: " Designer|";}
+    15%{content: " Designe|";}
+    16%{content: " Design|";}
+    17%{content: " Desig|";}
+    18%{content: " Desi|";}
+    19%{content: " Des|";}
+    20%{content: " De|";}
+    21%{content: " D|";}
+    22%{content: " De|";}
+    23%{content: " Dev|";}
+    24%{content: " Deve|";}
+    25%{content: " Devel|";}
+    26%{content: " Develo|";}
+    27%{content: " Develop|";}
+    28%{content: " Develope|";}
+    29%{content: " Developer|";}
+    30%{content: " Developer |";}
+    31%{content: " Developer |";}
+    32%{content: " Developer |";}
+    33%{content: " Developer |";}
+    34%{content: " Developer|";}
+    35%{content: " Developer|";}
+    36%{content: " Develope|";}
+    37%{content: " Develop|";}
+    38%{content: " Develo|";}
+    39%{content: " Devel|";}
+    40%{content: " Deve|";}
+    41%{content: " Dev|";}
+    42%{content: " De|";}
+    43%{content: " D|";}
+    44%{content: " |";}
+    45%{content: " F|";}
+    46%{content: " Fr|";}
+    47%{content: " Fre|";}
+    48%{content: " Free|";}
+    49%{content: " Freel|";}
+    51%{content: " Freela|";}
+    52%{content: " Freelan|";}
+    53%{content: " Freelanc|";}
+    54%{content: " Freelance|";}
+    55%{content: " Freelancer|";}
+    56%{content: " Freelancer |";}
+    57%{content: " Freelancer |";}
+    58%{content: " Freelancer |";}
+    59%{content: " Freelancer |";}
+    60%{content: " Freelancer|";}
+    61%{content: " Freelancer|";}
+    62%{content: " Freelance|";}
+    63%{content: " Freelanc|";}
+    64%{content: " Freelan|";}
+    65%{content: " Freela|";}
+    66%{content: " Freel|";}
+    67%{content: " Free|";}
+    68%{content: " Fre|";}
+    69%{content: " Fr|";}
+    70%{content: " F|";}
+    71%{content: " |";}
+    72%{content: " P|";}
+    73%{content: " Ph|";}
+    74%{content: " Pho|";}
+    75%{content: " Phot|";}
+    76%{content: " Photo|";}
+    77%{content: " Photog|";}
+    78%{content: " Photogr|";}
+    79%{content: " Photogra|";}
+    80%{content: " Photograp|";}
+    81%{content: " Photograph|";}
+    82%{content: " Photographe|";}
+    83%{content: " Photographer|";}
+    84%{content: " Photographer |";}
+    85%{content: " Photographer |";}
+    86%{content: " Photographer |";}
+    87%{content: " Photographer|";}
+    88%{content: " Photographer|";}
+    89%{content: " Photographe|";}
+    90%{content: " Photograph|";}
+    91%{content: " Photograp|";}
+    92%{content: " Photogra|";}
+    93%{content: " Photogr|";}
+    94%{content: " Photog|";}
+    95%{content: " Photo|";}
+    96%{content: " Phot|";}
+    97%{content: " Pho|";}
+    98%{content: " Ph|";}
+    99%{content: " P|";}
+    100%{content: " |";}
+}
+/* ------------------------------------------------animation ended------------------------------------------------ */
+/* brackpoints */
+@media screen and (max-width: 768px){
+    .hero-content h1{
+        font-size: 3rem;
+    }
+    .hero-content p{
+        font-size: 1.5rem;
+    }
+}
+/* ended breakpoint */
+/* ----------Ended home------------ */
+/* -----------about sec----------- */
+.title-s {
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 1.1rem;
+}
+.fontb{
+    position: relative;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+.fontb::before{
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    width: 17%;
+    height: 3px;
+    background-color: #0078ff;
+
+}
+/* about ended */
+/* services section */
+.services-box {
+    background-color: #fff;
+    padding: 2.5rem 1.3rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.icon-cer i {
+    font-size: 40px;
+}
+.icon-cer{
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 0 10px #0078ff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.services-box:hover .icon-cer {
+    transition: all 500ms ease;
+    color: #fff;
+    background-color: #0078ff;
+    box-shadow: 0 0 0 10px #cde1f8;
+}
+.services-box .s-title {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.4rem 0;
+}
+.services-box .s-desc {
+    color: #4e4e4e;
+}
+.progress, .progress-stacked{
+    background-color: #cde1f8;
+    margin: 0.5rem 0 1.2rem 0;
+    border-radius: 0;
+    height: 0.7rem;
+}
+/* services section Ended */
+/* counter section */
+.section-counter{
+    background-image: url(../img/counters-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+.overlay-mf{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    background-color: #0078ff;
+}
+
+.paralax-mf{
+    position: relative;
+    padding: 8rem 0;
+}
+.counter-ico .icon-cer i{
+    font-size: 2rem;
+}
+.counter-box .icon-cer{
+        height: 60px;
+        width: 60px;
+        line-height: 1.5;
+        font-size: 2rem;
+        box-shadow: 0 0 0 10px #cde1f8;
+}
+/* counter ended */
+/* portfolio */
+.work-box {
+    margin-bottom: 3rem;
+    background-color: #fff;
+}
+.work-img img{
+    transition: all 1s;
+}
+.work-box:hover .work-img img{
+    transform: scale(1.3);
+}
+.work-content {
+    padding: 2rem 3% 1rem 4%;
+}
+.work-img {
+    display: block;
+    overflow: hidden;
+}
+.w-title {
+    font-size: 1.2rem;
+}
+.work-content .w-more {
+    color: #4e4e4e;
+    font-size: 0.8rem;
+}
+.work-content .w-more .w-ctegory {
+    color: #0078ff;
+}
+.work-content .w-like {
+    font-size: 2.5rem;
+    color: #0078ff;
+    float: right;
+}
+.work-content .w-like a {
+    color: #0078ff;
+}
+/* ----------testmonials section----------------- */
+.testimonials{
+    background-image: url(../img/overlay-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.testmonial-box .author{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 1rem 0;
+    display: block;
+    font-size: 1.4rem;
+}
+.carousel-indicators {
+    margin-bottom: -3rem;
+}
+.carousel-indicators [data-bs-target] {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+.carousel-item{
+    transition: all 1s;
+}
+/* ----------testmonials section ended----------------- */
+/* ----------blog section ------------ */
+.card-blog .card-body{
+    position: relative;
+}
+.card-blog .card-category-box{
+    line-height: 25px;
+    overflow: hidden;
+}
+.card-blog .card-body .card-category{
+    position: absolute;
+    top: -16px;
+    color: #fff;
+    padding: 0 15px 5px;
+    left: 50%;
+    overflow: hidden;
+    background-color: #0078ff;
+    border-radius: 4px;
+    transform: translate(-50%);
+}
+.card-blog .card-category .category {
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1px;
+    margin-bottom: 0;
+}
+.card-blog .card-title {
+    font-size: 1.3rem;
+    margin-top: 0.6rem;
+}
+.card-blog .card-desc{
+    color: #4e4e4e;
+}
+.avatar {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    overflow: hidden;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+.card-category-box h3 a ,.card-footer a{
+    color: black;
+}
+.card-category-box h3 a:hover ,.card-footer a:hover{
+    color: #0078ff;
+}
+/* ----------blog section ended ------------ */
+/* -----------contact section---------------- */
+#contact{
+    padding: 8rem 0 2rem;
+}
+.contact{
+    background-image: url(../img/overlay-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.title-box-2 {
+    margin-bottom: 3rem;
+}
+.title-left {
+    font-size: 2rem;
+    position: relative;
+}
+.title-left:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #0078ff;
+    width: 100px;
+    bottom: -12px;
+}
+.php-email-form input, 
+.php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+.php-email-form input {
+    padding: 10px 15px;
+}
+.php-email-form button[type=submit] {
+    background: #0078ff;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+}
+.box-shadow-a, .button:hover {
+    text-decoration: none;
+    box-shadow: 0 0 0 4px #cde1f8;
+
+}
+.php-email-form button[type=submit]:hover{
+    background: #3393ff;
+}
+.button-big {
+    font-size: 1.2rem;
+}
+.list-ico {
+    line-height: 2;
+}
+.list-ico span {
+    color: #0078ff;
+    margin-right: 10px;
+}
+.socials {
+    padding: 1.5rem 0;
+}
+.socials ul li {
+    display: inline-block;
+}
+.socials .icon-cer{
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    line-height: 1.6;
+    margin: 0 15px 0 0;
+    box-shadow: 0 0 0 3px #0078ff;
+    transition: all 500ms ease;
+    color: #1e1e1e;
+}
+.contact .icon-cer i {
+    font-size: 20px;
+}
+.list-ico span {
+    color: #0078ff;
+    margin-right: 10px;
+}
+.socials .icon-cer:hover {
+    background-color: #0078ff;
+    color: #fff;
+    box-shadow: 0 0 0 3px #cde1f8;
+    transition: all 500ms ease;
+}
+/* ----------contact section ended------------ */
+/* ------------footer section---------------- */
+footer{
+        text-align: center;
+        color: #fff;
+        padding: 25px 0;
+        background-color: #0062d3;
+}
+footer .copyright {
+    margin-bottom: 0.3rem;
+}
+footer .credits {
+    margin-bottom: 0;
+}
+footer .credits a {
+    color: #fff;
+}
+/* ----------footer section ended------------ */
+.back-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #0078ff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    color: #fff;
+    font-size: 28px;
+    line-height: 0;
+}
